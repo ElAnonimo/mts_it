@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import Dropzone from 'react-dropzone';
 import ImageGallery from 'react-image-gallery';
 import { ReactImageGalleryItem } from 'react-image-gallery';
-import '../node_modules/react-image-gallery/styles/css/image-gallery.css';
-import './App.scss';
+import '../node_modules/react-image-gallery/styles/scss/image-gallery.scss';
+import styles from './App.module.scss';
+import './overrides.scss';
 
 const convertType = (type: string | ArrayBuffer | null):string => {
 	if (typeof type === 'string') {
@@ -36,13 +37,15 @@ const App: React.FC<{}> = () => {
 	imageSrcs.forEach((item, i) => item.description = `${i+1} из ${imageSrcs.length}`);
 	
   return (
-    <div className='App'>
+    <div className={styles['App']}>
       <Dropzone onDrop={handleOnDrop}>
 				{({ getRootProps, getInputProps }) => (
 					<section>
-						<div className='files-dropzone' {...getRootProps()}>
+						<div className={styles['files-dropzone']} {...getRootProps()}>
 							<input {...getInputProps()} />
-							<p className='files-drop'>Перетащите файлы в эту область<br />или<br /><span className='span-blue'>Выберите на компьютере</span></p>
+							<p className={styles['files-drop']}>
+								Перетащите файлы в эту область<br />или<br /><span className={styles['span-blue']}>Выберите на компьютере</span>
+							</p>
 						</div>
 					</section>
 				)}

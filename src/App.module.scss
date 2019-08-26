@@ -50,37 +50,3 @@
 .span-blue {
 	color: rgba(34, 167, 240, 1);
 }
-
-.original-image {
-	height: 500px;
-	background-color: rgba(232, 236, 241, 1);
-}
-
-.original-image {
-	.image-gallery-image {
-		img {
-			max-width: 100%;
-			max-height: 100%;
-		}
-	}
-} 
-
-.image-gallery-slide {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.image-gallery-slide {
-	img {
-		width: inherit;
-		height: 100%;
-	}
-}
-
-.image-gallery-description {
-	bottom: 90% !important;
-	left: 50% !important;
-	transform: translateX(-50%);
-	border-radius: 25px;
-}
