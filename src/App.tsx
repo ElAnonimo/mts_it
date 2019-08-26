@@ -5,7 +5,7 @@ import { ReactImageGalleryItem } from 'react-image-gallery';
 import '../node_modules/react-image-gallery/styles/css/image-gallery.css';
 import './App.scss';
 
-const convertType = (type: string | ArrayBuffer | null) => {
+const convertType = (type: string | ArrayBuffer | null):string => {
 	if (typeof type === 'string') {
 		return type;
 	} else {
